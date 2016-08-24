@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Third Page</title>
+</head>
+
+<body>
+
+  <h3>This is the Third page!</h3>
+  <hr />
+  <script type = "text/javascript">
+
+  var new_obj = {
+    get f(){
+      return 2;
+    }
+  };
+
+  Object.defineProperty( new_obj, "b", {
+    get: function(){ return this.f * 2},
+    enumerable: true
+  }
+);
+
+console.log(new_obj.b);
+
+  </script>
+
+
+</body>
+
+</html>
