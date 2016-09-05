@@ -11,19 +11,21 @@
   <hr />
   <script type = "text/javascript">
 
-  var new_obj = {
-    get f(){
-      return 2;
+  var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  var new_obj = { get f(){ return this._f_;}, set f(val){ this._f_ = val;
     }
   };
 
-  Object.defineProperty( new_obj, "b", {
+/*  Object.defineProperty( new_obj, "b", {
     get: function(){ return this.f * 2},
     enumerable: true
   }
-);
+);*/
+  new_obj.f = 5;
+console.log(new_obj.f);
 
-console.log(new_obj.b);
+
 
   </script>
 
